@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "GitHub fast edit",
+  "version": "0.1",
+  "icons": {
+    "16": "images/icon16.png",
+    "24": "images/icon24.png",
+    "32": "images/icon32.png",
+    "64": "images/icon64.png"
+  },
+  "background": {
+    "scripts": ["lib/jquery-3.1.1.js", "content.js"]
+  },
+  "content_scripts": [{
+    "run_at": "document_end",
+    "matches": [
+      "https://github.com/*"
+    ],
+    "js": [
+      "lib/jquery-3.1.1.js",
+      "content.js"
+    ]
+  }],
+  "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_title": "GitHub fast edit"
+  }
+}
