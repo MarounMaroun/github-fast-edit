@@ -9,7 +9,7 @@
     "64": "images/icon64.png"
   },
   "background": {
-    "scripts": ["lib/jquery-3.1.1.js", "content.js"]
+    "scripts": ["background.js"]
   },
   "content_scripts": [{
     "run_at": "document_end",
@@ -23,7 +23,8 @@
   }],
   "permissions": [
     "tabs",
-    "<all_urls>"
+    "<all_urls>",
+    "webNavigation"
   ],
   "browser_action": {
     "default_title": "GitHub fast edit"
